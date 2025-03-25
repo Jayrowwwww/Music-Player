@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <style>
+        :root{
+            --color-primary: rgb(165, 165, 165);
+            --color-secondary: rgb(255, 72, 0);
+            --button: black;
+            --text-color: white;
+        }
+    </style>
+    <title>Music Player</title>
+</head>
+<body class="flex h-screen bg-gray-500 text-gray-200 justify-center items-center">
+    <div class="flex  h-[90vh] w-[90%]">
+        <!-- Sidebar -->
+        <div class="w-80 bg-gray-800 p-5 flex flex-col space-y-6 rounded-l-xl">
+            <h1 class="text-xl font-bold">BRAND</h1>
+            <nav>
+                <ul class="space-y-4">
+                    <a href=""><li class="text-orange-500 font-semibold">Explore</li></a>
+                    <a href=""><li>Genres</li></a>
+                    <a href=""><li>Artists</li></a>
+                    <a href=""><li>Albums</li></a>
+                </ul>
+            </nav>
+            <h2 class="mt-6 font-semibold">Library</h2>
+            <ul class="space-y-4">
+                <li>Recent</li>
+                <li>Favorites</li>
+                <li>Albums</li>
+                <li>Offline</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 bg-gray-900 rounded-r-xl overflow-y-scroll overflow-y-hidden">
+            <header class="flex justify-between items-center px-4">
+                <ul class="flex gap-10 font-[400] text-lg" >
+                    <li><a href="">Music</a></li>
+                    <li><a href="">Podcast</a></li>
+                    <li><a href="">Live</a></li>
+                </ul>
+
+                <div class="flex items-center w-70 p-2 bg-gray-700 rounded-sm ">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Search Here" class="text-white ml-4 outline-none">
+                </div>
+
+                <div class="flex items-center">
+                    <div class="flex justify-between w-10">
+                        <a href=""><i class="fa-solid fa-bell"></i></a>
+                        <a href=""><i class="fa-solid fa-gear"></i></a>
+                    </div>
+                    <a href=""><div class="flex items-center bg-gray-500 px-4 py-1 ml-3 rounded-sm">
+                        <img src="./assets/images/me.jpg" class="h-[40px]" alt="">
+                        <p class="ml-3">Jerreh Romer</p>
+                    </div></a>
+                </div>
+            </header>
+            
+            <!-- Trending Songs -->
+            <h2 class="text-2xl font-semibold">Trending Hits</h2>
+            <div class="grid grid-cols-5 gap-80 mt-6">
+                <div class="relative bg-gray-700 h-[350px] w-[300px] p-4 rounded-3xl bg-[url(./assets/images/Ariana_Grande.png)] bg-no-repeat bg-cover bg-center">
+                    <h3 class="absolute bottom-10 mt-2">Positions</h3>
+                    <p class="absolute bottom-5 text-sm text-gray-400 bottom-0">173.6 million</p>
+                </div>
+
+                <div class="relative bg-gray-700 h-[350px] w-[300px] p-4 rounded-3xl bg-[url(./assets/images/billie.jpg)] bg-center">
+                    <h3 class="absolute bottom-10 mt-2">Therefore I Am</h3>
+                    <p class="absolute bottom-5 text-sm text-gray-400">60.1 million</p>
+                </div>
+
+                <div class="relative h-[350px] w-[300px] p-4 rounded-3xl bg-[url(./assets/images/weeknd.jpg)] bg-center">
+                    <h3 class="absolute bottom-10 mt-2">Blinding Lights</h3>
+                    <p class="absolute bottom-5 text-sm text-gray-400">1.6 billion</p>
+                </div>
+
+                <div class="relative bg-gray-700 h-[350px] w-[300px] p-4 rounded-3xl bg-[url(./assets/images/weeknd.jpg)] bg-center">
+                    <h3 class="absolute bottom-10 mt-2">Blinding Lights</h3>
+                    <p class="absolute bottom-5 text-sm text-gray-400">1.6 billion</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-[50rem_27rem] grid-row-[15rem_10rem] gap-10 mt-20">
+                <div class="flex flex-col">
+                    <div class="flex flex-col w-[50rem] h-[15rem] bg-gray-500 rounded-3xl">
+                        <div class="flex justify-between px-9 py-2">
+                            <h2 class="text-xl font-bold">Top Artists</h2>
+                            <a href="">View all →</a>
+                        </div>
+                        <div class="flex justify-center gap-10">
+                            <div class="flex flex-col text-center">
+                                <img src="./assets/images/billie.jpg" alt="" class="h-30 rounded-full border-2 border-orange-700">
+                                <h4>Billie Eilish</h4>
+                                <p>40.6 million</p>
+                            </div>
+
+                            <div class="flex flex-col text-center">
+                                <img src="./assets/images/billie.jpg" alt="" class="h-30 rounded-full border-2 border-orange-700">
+                                <h4>Billie Eilish</h4>
+                                <p>40.6 million</p>
+                            </div>
+
+                            <div class="flex flex-col text-center">
+                                <img src="./assets/images/billie.jpg" alt="" class="h-30 rounded-full border-2 border-orange-700">
+                                <h4>Billie Eilish</h4>
+                                <p>40.6 million</p>
+                            </div>
+
+                            <div class="flex flex-col text-center">
+                                <img src="./assets/images/billie.jpg" alt="" class="h-30 rounded-full border-2 border-orange-700">
+                                <h4>Billie Eilish</h4>
+                                <p>40.6 million</p>
+                            </div>
+
+                            <div class="flex flex-col text-center">
+                                <img src="./assets/images/billie.jpg" alt="" class="h-30 rounded-full border-2 border-orange-700">
+                                <h4>Billie Eilish</h4>
+                                <p>40.6 million</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex flex-col bg-gray-500 rounded-3xl h-70 p-5">
+                            <div class="flex justify-between w-[20rem]">
+                                <h2>Genres</h2>
+                                <a href="">View All →</a>
+                            </div>
+                            <div class="grid grid-cols-2 grid-rows-2 gap-5 p-10">
+                                <div class="flex justify-center items-center bg-yellow-600 w-20 h-10 rounded-sm">
+                                    POP
+                                </div>
+
+                                <div class="flex justify-center items-center bg-yellow-600 w-20 h-10 rounded-sm">
+                                    R&B
+                                </div>
+
+                                <div class="flex justify-center items-center bg-yellow-600 w-20 h-10 rounded-sm">
+                                    DRAMA
+                                </div>
+
+                                <div class="flex justify-center items-center bg-yellow-600 w-20 h-10 rounded-sm">
+                                    METAL
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex bg-gray-500 rounded-3xl w-[20rem]">
+                            <div class="flex ">
+                                <h1>Charts</h1>
+                                <a href="">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center bg-gray-500 rounded-3xl w-[27rem] h-120">
+                    <h1>Player</h1>
+                    <div class="flex flex-col justify-center items-center">
+                        <div class="flex justify-evenly items-center bg-[url(./assets/images/weeknd.jpg)] w-80 h-90 bg-cover rounded-3xl">
+                            <i class="fa-solid fa-backward scale-[3] opacitiy-50"></i>
+                            <i class="fa-solid fa-play scale-[3]"></i>
+                            <i class="fa-solid fa-forward scale-[3]"></i>
+                        </div>
+                        <div class="flex flex-col justify-start">
+                            <h1 class="flex justify-start">Sunriser</h1>
+                            <p>The Weeknd</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </main>
+    </div>
+</body>
+</html>
