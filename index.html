@@ -12,34 +12,63 @@
             --button: black;
             --text-color: white;
         }
+
+        #navbar ul li{
+            transition: all 0.1s ease-in-out;
+        }
+
+        #navbar ul li:hover{
+            color: orange;
+            border-right: 3px solid orange;
+        }
+
+        #upper-nav ul li{
+            transition: all 0.1s ease-in;
+        }
+
+        #upper-nav ul li:hover{
+            color: orange;
+            border-bottom: 2px solid orange;
+        }
+
+
     </style>
     <title>Music Player</title>
 </head>
 <body class="flex h-screen bg-gray-500 text-gray-200 justify-center items-center">
-    <div class="flex  h-[90vh] w-[90%]">
+    <div class="flex h-[90vh] w-[90%]">
         <!-- Sidebar -->
-        <div class="w-80 bg-gray-800 p-5 flex flex-col space-y-6 rounded-l-xl">
-            <h1 class="text-xl font-bold">BRAND</h1>
-            <nav>
-                <ul class="space-y-4">
-                    <a href=""><li class="text-orange-500 font-semibold">Explore</li></a>
+        <div class="w-80 bg-gray-800 px-10 py-8 flex flex-col space-y-6 rounded-l-xl">
+            <h1 class="text-xl font-bold text-center">BRAND</h1>
+            <nav id="navbar">
+                <h1 class="font-bold text-xl">MENU</h1>
+                <ul class="flex flex-col gap-y-2 pt-5">
+                    <a href=""><li>Explore</li></a>
                     <a href=""><li>Genres</li></a>
                     <a href=""><li>Artists</li></a>
                     <a href=""><li>Albums</li></a>
                 </ul>
+                <h2 class="mt-6 font-bold text-xl">Library</h2>
+                <ul class="flex flex-col gap-y-2 pt-5">
+                    <a href=""><li>Recent</li></a>
+                    <a href=""><li>Favorites</li></a>
+                    <a href=""><li>Albums</li></a>
+                    <a href=""><li>Offline</li></a>
+                </ul>
             </nav>
-            <h2 class="mt-6 font-semibold">Library</h2>
-            <ul class="space-y-4">
-                <li>Recent</li>
-                <li>Favorites</li>
-                <li>Albums</li>
-                <li>Offline</li>
-            </ul>
+
+            <div class="flex flex-col">
+                <h1 class="font-bold text-xl">Playlist</h1>
+                <div class="flex justify-between pt-5">
+                    <h2>Add Playlist</h2>
+                    <button><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
         </div>
 
         <!-- Main Content -->
         <main class="flex-1 p-6 bg-gray-900 rounded-r-xl overflow-y-scroll overflow-y-hidden">
-            <header class="flex justify-between items-center px-4">
+            <header id="upper-nav" class="flex justify-between items-center px-4">
                 <ul class="flex gap-10 font-[400] text-lg" >
                     <li><a href="">Music</a></li>
                     <li><a href="">Podcast</a></li>
@@ -47,7 +76,7 @@
                 </ul>
 
                 <div class="flex items-center w-70 p-2 bg-gray-700 rounded-sm ">
-                    <i class="fa fa-search"></i>
+                    <button><i class="fa fa-search"></i></button>
                     <input type="text" placeholder="Search Here" class="text-white ml-4 outline-none">
                 </div>
 
@@ -67,7 +96,7 @@
             <h2 class="text-2xl font-semibold">Trending Hits</h2>
             <div class="grid grid-cols-5 gap-80 mt-6">
                 <div class="relative bg-gray-700 h-[350px] w-[300px] p-4 rounded-3xl bg-[url(./assets/images/Ariana_Grande.png)] bg-no-repeat bg-cover bg-center">
-                    <h3 class="absolute bottom-10 mt-2">Positions</h3>
+                    <h3 class="absolute bottom-10 mt-2 font-semibold text-[30px]">Positions</h3>
                     <p class="absolute bottom-5 text-sm text-gray-400 bottom-0">173.6 million</p>
                 </div>
 
@@ -127,42 +156,129 @@
                         </div>
                     </div>
 
-                    <div class="flex">
+                    <div class="flex justify-between mt-7">
                         <div class="flex flex-col bg-gray-500 rounded-3xl h-70 p-5">
                             <div class="flex justify-between w-[20rem]">
                                 <h2>Genres</h2>
-                                <a href="">View All →</a>
+                                <a href="">View All</a>
                             </div>
-                            <div class="grid grid-cols-2 grid-rows-2 gap-5 p-10">
-                                <div class="flex justify-center items-center bg-yellow-600 w-20 h-10 rounded-sm">
+                            <div class="grid grid-cols-[100px_100px_100px] grid-rows-[40px_40px_40px_40px] gap-y-4 gap-x-2 mt-2">
+                                <div class="flex justify-center items-center bg-yellow-600 rounded-sm">
                                     POP
                                 </div>
 
-                                <div class="flex justify-center items-center bg-yellow-600 w-20 h-10 rounded-sm">
+                                <div class="flex justify-center items-center bg-yellow-600 rounded-sm row-span-2">
                                     R&B
                                 </div>
 
-                                <div class="flex justify-center items-center bg-yellow-600 w-20 h-10 rounded-sm">
+                                <div class="flex justify-center items-center bg-yellow-600 rounded-sm">
                                     DRAMA
                                 </div>
 
-                                <div class="flex justify-center items-center bg-yellow-600 w-20 h-10 rounded-sm">
+                                <div class="flex justify-center items-center bg-yellow-600 rounded-sm row-span-2">
+                                    METAL
+                                </div>
+
+                                <div class="flex justify-center items-center bg-yellow-600 rounded-sm">
+                                    METAL
+                                </div>
+
+                                <div class="flex justify-center items-center bg-yellow-600 rounded-sm col-span-2 row-span-2">
                                     METAL
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex bg-gray-500 rounded-3xl w-[20rem]">
-                            <div class="flex ">
+                        <div class="flex flex-col  align-center bg-gray-500 rounded-3xl w-[20rem] h-90 overflow-y-scroll overflow-y-hidden">
+                            <div class="flex justify-between w-[100%] px-6">
                                 <h1>Charts</h1>
                                 <a href="">View All</a>
+                            </div>
+                            <div class="flex flex-col gap-y-4 mt-2">
+                                <div class="flex justify-between items-center px-6">
+                                    <h1>01</h1>
+                                    <div class="flex">
+                                        <img src="./assets/images/Ariana_Grande.png" alt="" class="h-15 rounded-xl">
+                                        <div class="pl-3">
+                                            <h1>Positions</h1>
+                                            <p>Ariana Grande</p>
+                                        </div>
+                                    </div>
+
+                                    <p>2:20</p>
+                                </div>
+
+                                <div class="flex justify-between items-center px-6">
+                                    <h1>02</h1>
+                                    <div class="flex">
+                                        <img src="./assets/images/Ariana_Grande.png" alt="" class="h-15 rounded-xl">
+                                        <div class="pl-3">
+                                            <h1>Positions</h1>
+                                            <p>Ariana Grande</p>
+                                        </div>
+                                    </div>
+
+                                    <p>2:20</p>
+                                </div>
+
+                                <div class="flex justify-between items-center px-6">
+                                    <h1>03</h1>
+                                    <div class="flex">
+                                        <img src="./assets/images/Ariana_Grande.png" alt="" class="h-15 rounded-xl">
+                                        <div class="pl-3">
+                                            <h1>Positions</h1>
+                                            <p>Ariana Grande</p>
+                                        </div>
+                                    </div>
+
+                                    <p>2:20</p>
+                                </div>
+
+                                <div class="flex justify-between items-center px-6">
+                                    <h1>04</h1>
+                                    <div class="flex">
+                                        <img src="./assets/images/Ariana_Grande.png" alt="" class="h-15 rounded-xl">
+                                        <div class="pl-3">
+                                            <h1>Positions</h1>
+                                            <p>Ariana Grande</p>
+                                        </div>
+                                    </div>
+
+                                    <p>2:20</p>
+                                </div>
+
+                                <div class="flex justify-between items-center px-6">
+                                    <h1>05</h1>
+                                    <div class="flex">
+                                        <img src="./assets/images/Ariana_Grande.png" alt="" class="h-15 rounded-xl">
+                                        <div class="pl-3">
+                                            <h1>Positions</h1>
+                                            <p>Ariana Grande</p>
+                                        </div>
+                                    </div>
+
+                                    <p>2:20</p>
+                                </div>
+
+                                <div class="flex justify-between items-center px-6">
+                                    <h1>06</h1>
+                                    <div class="flex">
+                                        <img src="./assets/images/Ariana_Grande.png" alt="" class="h-15 rounded-xl">
+                                        <div class="pl-3">
+                                            <h1>Positions</h1>
+                                            <p>Ariana Grande</p>
+                                        </div>
+                                    </div>
+
+                                    <p>2:20</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="flex flex-col justify-center bg-gray-500 rounded-3xl w-[27rem] h-120">
-                    <h1>Player</h1>
+                    <h1 class="text-center font-semibold text-[30px]">Player</h1>
                     <div class="flex flex-col justify-center items-center">
                         <div class="flex justify-evenly items-center bg-[url(./assets/images/weeknd.jpg)] w-80 h-90 bg-cover rounded-3xl">
                             <i class="fa-solid fa-backward scale-[3] opacitiy-50"></i>
@@ -170,7 +286,7 @@
                             <i class="fa-solid fa-forward scale-[3]"></i>
                         </div>
                         <div class="flex flex-col justify-start">
-                            <h1 class="flex justify-start">Sunriser</h1>
+                            <h1 class="text-center">Sunriser</h1>
                             <p>The Weeknd</p>
                         </div>
                     </div>
